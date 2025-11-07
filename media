@@ -1,0 +1,57 @@
+
+    @media (min-width: 577px) and (max-width: 992px) {
+        .homepage {
+            flex-direction: column;
+            height: auto;
+            text-align: center;
+        }
+
+        .content h1 {
+            font-size: 50px;
+        }
+
+        .content h2 {
+            font-size: 30px;
+        }
+
+        .content p {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .maincard {
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        .image-container {
+            width: 250px;
+            height: 180px;
+        }
+
+        .skills {
+            height: auto;
+            border-radius: 0;
+        }
+    }
+
+    @media (min-width: 993px) and (max-width: 1200px) {
+        .content h1 {
+            font-size: 60px;
+        }
+
+        .content h2 {
+            font-size: 40px;
+        }
+
+        .content p {
+            width: 70%;
+        }
+
+        .maincard {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }

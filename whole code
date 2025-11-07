@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Uday Punia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+    <link rel="icon" href="./images/briefcase.png">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Share Tech", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+    }
+
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background: #004FF9;
+        background: linear-gradient(to right, #FFF94C, #004FF9);
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        /* optional, makes gradient stay while scrolling */
+
+
+
+    }
+
+    .container {
+        position: sticky;
+        top: 0px;
+    }
+
+    .navbar {
+        background-color: rgba(26, 0, 51, 0.6);
+        backdrop-filter: blur(10px);
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar a {
+        text-decoration-line: none;
+        color: white;
+        margin-right: 30px;
+        font-size: x-large;
+        padding: 8px 16px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+
+    }
+
+    .navbar a:hover {
+        background-color: rgb(246, 4, 8);
+        color: white;
+        padding: 10px 20px;
+        font-size: xx-large;
+    }
+
+    .profile_photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        position: absolute;
+        margin: 2px 20px;
+        color: white;
+        z-index: 1;
+    }
+
+    .profile_photo img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: top center;
+        border: 1px solid white;
+
+    }
+
+
+    .profile_photo h3 {
+        font-size: 18px;
+        color: white;
+        margin: 0;
+    }
+
+    .section1 {
+        width: 100%;
+        height: 500px;
+        color: white;
+        background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+        display: flex;
+        flex-direction: row;
+
+    }
+
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: bottom;
+
+    }
+
+    .content h1 {
+        font-size: 70px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        margin-left: 50px;
+    }
+
+    .content h2 {
+        font-size: 50px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        margin-left: 50px;
+        text-align-last: right;
+    }
+
+    .content p {
+        box-sizing: border-box;
+        width: 600px;
+        margin-left: 50px;
+        font-size: medium;
+        line-height: 1.6;
+    }
+
+    .imagepng {
+        height: 500px;
+        margin-left: 150px;
+        height: 500px;
+
+    }
+
+    .Project_line{
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+        text-decoration-line: overline;
+        text-decoration-color: rgb(203, 248, 3);
+        color: white;
+        margin:20px;
+     background: #833AB4;
+background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+border-radius: 50px;
+    }
+
+    .maincard {
+        display: flex;
+        flex-direction: row;
+        height: 400px;
+        width: 1200px;
+
+    }
+
+    .image-container {
+               align-items: center;
+        justify-content: center;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    }
+
+
+    .item1 {
+        justify-items: center;
+        align-items: center;
+
+    }
+
+    .item2 {
+        justify-items: center;
+        align-items: center;
+    }
+
+    .item3 {
+        justify-items: center;
+        align-items: center;
+    }
+
+    .skills {
+        background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+        width: 100%;
+        height: 800px;
+        color: white;
+        border-radius: 0% 0% 60% 0%;
+
+    }
+
+    .skills h1 {
+        text-align: left;
+        font-size: 50px;
+        font-weight: bold;
+        padding: 50px 50px;
+        text-decoration-line: overline;
+        text-decoration-color: rgb(203, 248, 3);
+    }
+
+    @media (max-width: 576px) {
+        body {
+            background: linear-gradient(to bottom, #FFF94C, #004FF9);
+        }
+        
+    .container {
+        position: static;
+        top: 0px;
+    }
+
+
+        .navbar {
+            flex-direction: column;
+            height: auto;
+            padding: 10px;
+            
+        }
+
+        .navbar a {
+            margin: 8px 0;
+            font-size: large;
+
+        }
+
+        .homepage {
+            flex-direction: column;
+            height: auto;
+            border-radius: 0;
+            text-align: center;
+        }
+
+        .content h1 {
+            font-size: 40px;
+            margin-left: 0;
+        }
+
+        .content h2 {
+            font-size: 24px;
+            margin-left: 0;
+        }
+
+        .content p {
+            width: 90%;
+            margin: 0 auto;
+            font-size: 14px;
+        }
+
+        .pngimg img {
+            width: 80%;
+            height: auto;
+            margin: 20px auto;
+        }
+
+        .maincard {
+            flex-direction: column;
+            width: 90%;
+            margin: 0 auto;
+            height: auto;
+        }
+
+        .image-container {
+            width: 90%;
+            height: auto;
+            margin: 20px auto;
+        }
+
+        .skills {
+            height: auto;
+            text-align: center;
+            border-radius: 0;
+        }
+
+        .skills h1 {
+            font-size: 36px;
+        }
+    }
+
+    @media (min-width: 577px) and (max-width: 992px) {
+        .homepage {
+            flex-direction: column;
+            height: auto;
+            text-align: center;
+        }
+
+        .content h1 {
+            font-size: 50px;
+        }
+
+        .content h2 {
+            font-size: 30px;
+        }
+
+        .content p {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .maincard {
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        .image-container {
+            width: 250px;
+            height: 180px;
+        }
+
+        .skills {
+            height: auto;
+            border-radius: 0;
+        }
+    }
+
+    @media (min-width: 993px) and (max-width: 1200px) {
+        .content h1 {
+            font-size: 60px;
+        }
+
+        .content h2 {
+            font-size: 40px;
+        }
+
+        .content p {
+            width: 70%;
+        }
+
+        .maincard {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="profile_photo"><a href="./images/me.jpg" target="_blank"><img src="./images/me.jpg" alt="">
+            </a>
+            <h3>Uday Punia</h3>
+        </div>
+        <div class="navbar">
+            <a href="#Home">Home</a>
+            <a href="#Projects">Projects</a>
+            <a href="#Skills">Skills</a>
+            <a href="#Contact">Contact</a>
+            <a href="#About">About</a>
+        </div>
+    </div>
+    <div class="section1">
+        <div class="content">
+            <h1>Hi!</h1>
+            <h2>I'm Uday Punia — Frontend Web Developer</h2>
+            <p>
+                I'm passionate about building responsive and user-friendly web interfaces.
+                Currently, I’m expanding my skills in the <strong>MERN Stack</strong> and <strong>UI/UX
+                    Design</strong>
+                to create full-stack solutions with a strong focus on user experience and clean design.
+                Explore my projects to see how I combine creativity and functionality in every website I build.
+            </p>
+        </div>
+        <div class="pngimg">
+            <img class="imagepng" src="./images/uday-removebg-preview.png" alt="Png image">
+        </div>
+    </div>
+
+       <section>
+         <h1 class="Project_line">Projects</h1>
+        <div class="maincard">
+            <div class="item1">
+                <div class="image-container"><img src="./images/Online resume builder.jpg" alt=""></div>
+                <h3>Personal portfolio website</h3>
+                <p>Build a dynamic and responsive website </p>
+            </div>
+            <div class="item2">
+                <div class="image-container"><img src="./images/Stock_Price_Prediction.webp" alt=""></div>
+                <h3>Personal portfolio website</h3>
+                <p>Build a dynamic and responsive website </p>
+            </div>
+            <div class="item3">
+                <div class="image-container"><img src="./images/Virtual classroom.jpeg" alt=""></div>
+                <h3>Personal portfolio website</h3>
+                <p>Build a dynamic and responsive website </p>
+            </div>
+       </section>
+
+       <section>
+
+       </section>
+
+    </div>
+
+</body>
+
+</html>

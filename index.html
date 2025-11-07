@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Uday Punia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+    <link rel="icon" href="./images/briefcase.png">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Share Tech", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+    }
+
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background: #004FF9;
+        background: linear-gradient(to right, #FFF94C, #004FF9);
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        /* optional, makes gradient stay while scrolling */
+
+
+
+    }
+
+    .container {
+        position: sticky;
+        top: 0px;
+    }
+
+    .navbar {
+        background-color: rgba(26, 0, 51, 0.6);
+        backdrop-filter: blur(10px);
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar a {
+        text-decoration-line: none;
+        color: white;
+        margin-right: 30px;
+        font-size: x-large;
+        padding: 8px 16px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+
+    }
+
+    .navbar a:hover {
+        background-color: rgb(246, 4, 8);
+        color: white;
+        padding: 10px 20px;
+        font-size: xx-large;
+    }
+
+    .profile_photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        position: absolute;
+        margin: 2px 20px;
+        color: white;
+        z-index: 1;
+    }
+
+    .profile_photo img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: top center;
+        border: 1px solid white;
+
+    }
+
+
+    .profile_photo h3 {
+        font-size: 18px;
+        color: white;
+        margin: 0;
+    }
+
+    .section1 {
+        width: 100%;
+        height: 500px;
+        color: white;
+        background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+        display: flex;
+        flex-direction: row;
+        border-radius: 0px 0px 50px 50px;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 5px solid white;
+    }
+
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: bottom;
+
+    }
+
+    .content h1 {
+        font-size: 70px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        margin-left: 50px;
+    }
+
+    .content h2 {
+        font-size: 50px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        margin-left: 50px;
+        text-align-last: right;
+    }
+
+    .content p {
+        box-sizing: border-box;
+        width: 600px;
+        margin-left: 50px;
+        font-size: medium;
+        line-height: 1.6;
+    }
+
+    .imagepng {
+        height: 500px;
+        margin-left: 150px;
+        height: 500px;
+
+    }
+
+    .Project_line {
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+        text-decoration-line: overline;
+        text-decoration-color: rgb(203, 248, 3);
+        color: white;
+        margin: 20px;
+        background: #e66565;
+        background: radial-gradient(circle, rgba(230, 101, 101, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(38, 24, 186, 1) 100%);
+        border-radius: 0px 50px;
+        border: 5px solid white;
+
+    }
+
+    .maincard {
+        display: flex;
+        flex-direction: row;
+        gap: 80px;
+        justify-content: center;
+        margin-top: 35px;
+
+    }
+
+    .image-container {
+        height: 400px;
+        width: 400px;
+
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0 0 8px 8px #5bfcff;
+    }
+
+    .maincard h3 {
+        margin-top: 15px;
+        font-size: xx-large;
+        text-align: center;
+        font-weight: 800;
+        color: white;
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 10px;
+        background-color: #004FF9;
+    }
+
+    .maincard p {
+        height: auto;
+        width: 400px;
+        color: #1A1A2E;
+        font-size: larger;
+        color: rgb(3, 19, 251);
+        border-radius: 10px;
+        background-color: #ffffff;
+        padding: 5px;
+
+    }
+
+    .Skills_line {
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+        text-decoration-line: overline;
+        text-decoration-color: rgb(203, 248, 3);
+        color: white;
+        margin: 50px 20px 10px 20px;
+        background: #e66565;
+        background: radial-gradient(circle, rgba(230, 101, 101, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(38, 24, 186, 1) 100%);
+        border-radius: 50px 0px;
+        border: 5px solid white;
+    }
+
+    .maincard-skills {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 10px 50px 0px 50px;
+        gap: 80px;
+        justify-content: center;
+
+    }
+
+    .skill-card {
+        margin-top: 20px;
+        height: 200px;
+        width: 200px;
+    }
+
+    .skill-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    .skill-card h3 {
+        text-align: center;
+        font-size: x-large;
+    }
+
+    .section2 {
+        width: 100%;
+        height: 900px;
+        color: white;
+        background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+        border-radius: 50px;
+    }
+
+    .Contacts-line {
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+        text-decoration-line: overline;
+        text-decoration-color: rgb(203, 248, 3);
+        color: white;
+        margin: 50px 20px 30px 20px;
+        background: #e66565;
+        background: radial-gradient(circle, rgba(230, 101, 101, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(38, 24, 186, 1) 100%);
+        border-radius: 50px 0px;
+        border: 5px solid white;
+    }
+
+    .contacts-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+
+    }
+
+    .contacts-cards {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+
+    }
+
+    .contacts-cards img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        cursor: pointer;
+    }
+
+    .contacts-cards a {
+        text-decoration-line: none;
+        color: white;
+        font-size: x-large;
+
+    }
+
+    .About-line {
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+        text-decoration-line: overline;
+        text-decoration-color: rgb(203, 248, 3);
+        color: white;
+        margin: 50px 20px 10px 20px;
+        background: #e66565;
+        background: radial-gradient(circle, rgba(230, 101, 101, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(38, 24, 186, 1) 100%);
+        border-radius: 50px 0px;
+        border: 5px solid white;
+    }
+
+    .About-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        height: 600px;
+        color: white;
+        background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+        border-radius: 50px;
+    }
+
+    .card {
+        height: auto;
+        width: auto;
+        margin: 50px;
+    }
+
+    .card-resume {
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+        width: 400px;
+        border: 5px solid white;
+        border-radius: 50px;
+        margin: 50px;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .card-resume img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        border: 2px solid black;
+        border-radius: 50px;
+
+    }
+
+    .Intro {
+        font-size: 50px;
+        font-weight: 800;
+        margin-bottom: 30px;
+    }
+
+    .para-intro {
+        line-height: 30px;
+        font-size: 25px;
+        font-weight: 400;
+        font-style: italic;
+        text-align: justify;
+    }
+
+    button {
+        height: 40px;
+        width: 150px;
+        background-color: blueviolet;
+        color: white;
+        font-size: 15px;
+        border-radius: 50px;
+        box-shadow: 1px 1px 2px 3px #ffffff;
+        cursor: pointer;
+    }
+
+    footer {
+        height: 250px;
+        width: 100%;
+        background: #c71087;
+        background: linear-gradient(to right, #990dda, #af0d1d);
+        margin-top: 10px;
+        border-radius: 50px 50px 0px 0px;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        gap: 50px;
+        color: white;
+    }
+
+    .footer-para {
+        font-family: 'Poppins', sans-serif;
+
+    }
+
+    .navbar a.active {
+        background-color: #00bcd4;
+        color: #fff;
+        font-weight: bold;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+</style>
+<script>
+
+    const sections = document.querySelectorAll("section, .section1");
+    const navLinks = document.querySelectorAll(".navbar a");
+
+    window.addEventListener("scroll", () => {
+        let current = "";
+
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            if (scrollY >= sectionTop - sectionHeight / 3) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${current}`) {
+                link.classList.add("active");
+            }
+        });
+    });
+</script>
+
+
+
+
+
+<body>
+
+    <div class="container">
+        <div class="profile_photo"><a href="./images/me.png" target="_blank"><img src="./images/me.png" alt="">
+            </a>
+            <h3>Uday Punia</h3>
+        </div>
+        <div class="navbar">
+            <a href="#Home">Home</a>
+            <a href="#Projects">Projects</a>
+            <a href="#Skills">Skills</a>
+            <a href="#Contact">Contact/Links</a>
+            <a href="#About">About Me</a>
+        </div>
+    </div>
+    <div id="Home" class="section1">
+        <div class="content">
+            <h1>Hi!</h1>
+            <h2>I'm Uday Punia — Frontend Web Developer</h2>
+            <p>
+                I'm passionate about building responsive and user-friendly web interfaces.
+                Currently, I’m expanding my skills in the <strong>MERN Stack</strong> and <strong>UI/UX
+                    Design</strong>
+                to create full-stack solutions with a strong focus on user experience and clean design.
+                Explore my projects to see how I combine creativity and functionality in every website I build.
+            </p>
+        </div>
+        <div class="pngimg">
+            <img class="imagepng" src="./images/uday-removebg-preview.png" alt="Png image">
+        </div>
+    </div>
+
+    <section id="Projects" class="project">
+        <h1 class="Project_line">Projects</h1>
+        <div class="maincard">
+            <div class="card1">
+                <div class="image-container"><img src="./images/Online resume builder.jpg" alt=""></div>
+                <h3>Online Resume Builder 📝</h3>
+                <p>A Java-based application that allows users to generate professional resumes instantly.
+                    Users simply fill in their personal and professional details, choose from multiple template designs,
+                    and the system automatically formats their data into the selected resume template.
+                    This project focuses on automation, clean UI, and dynamic data binding to simplify the resume
+                    creation process.</p>
+            </div>
+            <div class="card2">
+                <div class="image-container"><img src="./images/Stock_Price_Prediction.webp" alt=""></div>
+                <h3>Stock Market Price Prediction 📈</h3>
+                <p>A Machine Learning project built using Python and LSTM (Long Short-Term Memory) networks to predict
+                    stock market trends.
+                    The model is trained using real historical data from Kaggle and is capable of analyzing patterns to
+                    forecast future price movements.
+                    The project demonstrates skills in data preprocessing, time-series forecasting, and neural network
+                    implementation.</p>
+            </div>
+            <div class="card3">
+                <div class="image-container"><img src="./images/Virtual classroom.jpeg" alt=""></div>
+                <h3>Virtual Meet 👩‍💻</h3>
+                <p>A real-time video conferencing web application inspired by Google Meet.
+                    It allows users to create or join meetings, enable video/audio streaming, share screens, and chat in
+                    real-time using WebRTC, Socket.io, and Node.js.
+                    The platform emphasizes smooth communication, responsive UI, and secure peer-to-peer connectivity,
+                    making it ideal for online collaboration. </p>
+            </div>
+    </section>
+
+    <section id="Skills" class="skills">
+        <h1 class="Skills_line">Skills</h1>
+        <div class="section2">
+
+            <div class="maincard-skills">
+                <div class="skill-card">
+                    <img src="./images/HTML5.png" alt="">
+                    <h3>HTML 5</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="./images/256px-CSS3_logo_and_wordmark.svg.png" alt="">
+                    <h3>CSS 3</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="./images/512px-Unofficial_JavaScript_logo_2.svg.png" alt="">
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="./images/512px-Bootstrap_logo.svg.png" alt="">
+                    <h3>BootStrap</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="./images/512px-Tailwind_CSS_Logo.svg.png" alt="">
+                    <h3>Tailwind CSS</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="./images/512px-React-icon.svg.png" alt="">
+                    <h3>React JS</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="./images/512px-Node.js_logo.svg.png" alt="">
+                    <H3>Node JS</H3>
+                </div>
+                <div class="skill-card">
+                    <img src="./images/Express JS.svg" alt="">
+                    <h3>Express JS</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="./images/512px-MongoDB_Logo.svg.png" alt="">
+                    <h3>MongoDB</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="./images/MYSQL.svg" alt="">
+                    <h3>MYSQL</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="./images/JAVA.svg" alt="">
+                    <h3>JAVA</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="./images/figma.png" alt="">
+                    <h3>Figma</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="./images/512px-Git-logo.svg.png" alt="">
+                    <h3>Git</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="./images/128px-Github-desktop-logo-symbol.svg.png" alt="">
+                    <h3>GitHub</h3>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="Contact" class="contact">
+        <h1 class="Contacts-line">Contacts/Links</h1>
+        <div class="contacts-container">
+            <div class="contacts-cards">
+                <a href="https://www.linkedin.com/in/uday-punia-000b60253/" target="_blank"><img
+                        src="./images/Linked in.png" alt="">LinkedIn</a>
+            </div>
+            <div class="contacts-cards">
+                <a href="mailto:udaypunia9027@gmail.com" target="_blank"><img src="./images/gmail.png" alt="">Gmail</a>
+            </div>
+            <div class="contacts-cards">
+                <a href="https://github.com/Udaypunia9027" target="_blank"><img
+                        src="./images/128px-Github-desktop-logo-symbol.svg.png" alt="">GitHub</a>
+            </div>
+            <div class="contacts-cards">
+                <a href="https://www.instagram.com/_uday_punia/" target="_blank"><img src=".//images/instagram.png"
+                        alt="">Instagram</a>
+            </div>
+            <div class="contacts-cards">
+                <a href="https://www.facebook.com/profile.php?id=61575165214292" target="_blank"><img
+                        src="./images/Facebook.png" alt="">Facebook</a>
+            </div>
+            <div class="contacts-cards">
+                <a href="https://www.adobe.com/home?mv=other&promoid=LLVYT1CM" target="_blank"><img
+                        src="./images/behance.png" alt="">Behance</a>
+            </div>
+            <div class="contacts-cards">
+                <a href="https://dribbble.com/udaypunia" target="_blank"><img src="./images/dribble.png"
+                        alt="">Dribble</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="About" class="about">
+        <h1 class="About-line">
+            About Me
+        </h1>
+        <div class="About-container">
+            <div class="card">
+                <h2 class="Intro">Introduction</h2>
+                <p class="para-intro">Hi, I’m Uday Punia, a passionate and creative Front-End Web Developer currently
+                    pursuing my B.Tech in
+                    Computer Science and Engineering. I have a strong interest in building interactive, responsive, and
+                    visually appealing websites that deliver seamless user experiences.
+
+                    I specialize in HTML, CSS, JavaScript, and have hands-on experience with modern frameworks like
+                    React and tools such as Git, VS Code, and Figma. I love transforming ideas into functional and
+                    engaging web interfaces while continuously learning new technologies to stay ahead in the
+                    ever-evolving tech world.
+
+                    Apart from coding, I enjoy playing games, exploring new design trends, and creating content around
+                    technology. I consider myself an extrovert and a quick learner, always eager to collaborate,
+                    communicate, and contribute to exciting projects that make a real impact.
+
+                    My goal is to grow as a front-end developer in a professional environment where I can enhance my
+                    skills, work on meaningful projects, and keep pushing the limits of what’s possible on the web.</p>
+            </div>
+            <div class="card-resume">
+                <img src="./images/Purple and White Clean and Professional Resume.jpg" alt="">
+                <a href="./images/Front end Resume.pdf" download="Front end Resume.pdf"><button> Download
+                        Resume.pdf</button></a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="footer-content">
+                <p class="footer-para">© 2025 Uday Punia | Front-End Developer</p>
+            </div>
+            <div class="contacts-container">
+                <div class="contacts-cards">
+                    <a href="https://www.linkedin.com/in/uday-punia-000b60253/" target="_blank"><img
+                            src="./images/Linked in.png" alt="">LinkedIn</a>
+                </div>
+                <div class="contacts-cards">
+                    <a href="mailto:udaypunia9027@gmail.com" target="_blank"><img src="./images/gmail.png"
+                            alt="">Gmail</a>
+                </div>
+
+                <div class="contacts-cards">
+                    <a href="https://www.instagram.com/_uday_punia/" target="_blank"><img src=".//images/instagram.png"
+                            alt="">Instagram</a>
+                </div>
+                <div class="contacts-cards">
+                    <a href="https://www.facebook.com/profile.php?id=61575165214292" target="_blank"><img
+                            src="./images/Facebook.png" alt="">Facebook</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

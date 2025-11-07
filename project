@@ -1,0 +1,19 @@
+     <section>
+         <h1 class="Project_line">Projects</h1>
+        <div class="maincard">
+            <div class="item1">
+                <div class="image-container"><img src="./images/Online resume builder.jpg" alt=""></div>
+                <h3>Personal portfolio website</h3>
+                <p>Build a dynamic and responsive website </p>
+            </div>
+            <div class="item2">
+                <div class="image-container"><img src="./images/Stock_Price_Prediction.webp" alt=""></div>
+                <h3>Personal portfolio website</h3>
+                <p>Build a dynamic and responsive website </p>
+            </div>
+            <div class="item3">
+                <div class="image-container"><img src="./images/Virtual classroom.jpeg" alt=""></div>
+                <h3>Personal portfolio website</h3>
+                <p>Build a dynamic and responsive website </p>
+            </div>
+       </section>
