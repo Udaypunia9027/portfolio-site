@@ -83,7 +83,7 @@
         margin: 2px 20px;
         color: white;
         z-index: 1;
-    }   
+    }
 
     .profile_photo img {
         width: 50px;
@@ -284,7 +284,7 @@
     .contacts-container {
         display: flex;
         flex-direction: row;
-        flex-wrap:wrap;
+        flex-wrap: wrap;
         justify-content: center;
         gap: 50px;
 
@@ -420,28 +420,62 @@
         border-radius: 8px;
         transition: 0.3s;
     }
-    @media (max-width:600px){
-        .container{
+
+    @media (max-width:600px) {
+        .maincard{
+            display: flex;
+            flex-direction: column;
+        }
+        .content p {
+            width: 100%;
+            max-width: 100%;
+            margin-left: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section1 {
+            flex-direction: column;
+            text-align: center;
+            height: auto;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
             display: flex;
             flex-direction: column;
             position: static;
-            width: auto;
         }
-        .navbar{
+
+        .navbar {
             display: flex;
             flex-direction: column;
-            height: auto;
+            height: 200px;
             width: auto;
-            
+
         }
-        .profile_photo{
+
+        .profile_photo {
             display: flex;
             flex-direction: row;
-                position: absolute;
-        margin: 2px 20px;
-        color: white;
-        z-index: 0;
-        position: relative;
+            position: relative;
+            margin-right: 80px;
+        }
+
+        .content h2 {
+            font-size: 30px;
+            text-align: center;
+            margin: 0;
+
+        }
+        .About-container{
+            display: flex;
+            flex-direction: column;
         }
     }
 </style>
