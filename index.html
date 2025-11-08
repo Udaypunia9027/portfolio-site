@@ -83,7 +83,7 @@
         margin: 2px 20px;
         color: white;
         z-index: 1;
-    }
+    }   
 
     .profile_photo img {
         width: 50px;
@@ -419,6 +419,30 @@
         font-weight: bold;
         border-radius: 8px;
         transition: 0.3s;
+    }
+    @media (max-width:600px){
+        .container{
+            display: flex;
+            flex-direction: column;
+            position: static;
+            width: auto;
+        }
+        .navbar{
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            width: auto;
+            
+        }
+        .profile_photo{
+            display: flex;
+            flex-direction: row;
+                position: absolute;
+        margin: 2px 20px;
+        color: white;
+        z-index: 0;
+        position: relative;
+        }
     }
 </style>
 <script>
